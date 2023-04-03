@@ -1,5 +1,7 @@
 # New Note Sequence Diagram 
 
+```mermaid
+
 sequenceDiagram
     participant browser
     participant server
@@ -8,3 +10,5 @@ sequenceDiagram
     activate server
     server-->>browser
     deactivate server
+s
+```
