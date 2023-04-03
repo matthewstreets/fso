@@ -10,5 +10,5 @@ sequenceDiagram
     activate server
     server-->>browser
     deactivate server
-s
+
 ```
