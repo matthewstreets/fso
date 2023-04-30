@@ -44,7 +44,7 @@ const App = () => {
   const all = good + neutral + bad
   const avg = (1*(good) + 0*(neutral) -1*(bad))/all
   const positive = 100 * (good / all) + " %" 
-
+  
   return (
     <div>
       <Feedback />
