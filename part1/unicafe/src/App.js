@@ -17,21 +17,27 @@ const Statistics = ({feedback}) => {
   } else return (
     <div>
       <h1><u>Statistics</u></h1>
-      <StatisticLine text='Good' value={feedback[0]} />
-      <StatisticLine text='Neutral' value={feedback[1]} />
-      <StatisticLine text='Bad' value={feedback[2]} />
-      <StatisticLine text='All' value={feedback[3]} />
-      <StatisticLine text='Average' value={feedback[4]} />
-      <StatisticLine text='Positive' value={feedback[5]} />
+      <table>
+        <tbody>
+        <StatisticLine text='Good' value={feedback[0]} />
+        <StatisticLine text='Neutral' value={feedback[1]} />
+        <StatisticLine text='Bad' value={feedback[2]} />
+        <StatisticLine text='All' value={feedback[3]} />
+        <StatisticLine text='Average' value={feedback[4]} />
+        <StatisticLine text='Positive' value={feedback[5]} />
+        </tbody>
+      </table>
     </div>
   )
 }
 
-const StatisticLine = ({text, value}) => {
-  return (
-    <p>{text}: {value}</p>
-  )
-}
+const StatisticLine = ({text, value}) => (
+  <tr>
+    <td>{text}</td>
+    <td>{value}</td>
+  </tr>
+)
+
 const Button = ({handleClick, text}) => (
   <button onClick={handleClick}>{text}</button>
 )
